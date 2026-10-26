@@ -8,20 +8,32 @@
 </head>
 <body>
     <header>
-        <input type="search" id="search">
-        <div>
-            <p>Hi there,</p>
-            <p>Morgan Oakley (@morgan)</p>
+        <div class="bottom-left">
+            <img src="./assets/icon.jpg">
+            <p><strong>Hi there,</strong></p>
+            <h2>Jack Boakes (@jackboakes)</h2>
         </div>
-
-        <nav>
+        <div class="top-right">
+            <img src="./assets/bell-ring-outline.svg">
+            <img class="icon" src="./assets/icon.jpg">
+            <p class="account-name">Jack Boakes</p>
+        </div>
+        <nav class="bottom-right">
             <ul>
-                <li>New</li>
-                <li>Upload</li>
-                <li>Share</li>
+                <li><button>New</button></li>
+                <li><button>Upload</button></li>
+                <li><button>Share</button></li>
             </ul>
         </nav>
+        
+
+        <div class="search">
+            <img src="./assets/magnify.svg">
+            <input class="top-left" type="search" id="search" placeholder="Search..." />
+        </div>
+        
     </header>
+
     <div class="sidebar">
         <div class="sidebar-header">
             <h1>Dashboard</h1>
@@ -149,29 +161,40 @@
         <div class="announcements-container">
             <h2>Announcements</h2>
             <div class="announcements">
-                <h3>Site Maintenance</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, ipsam. Libero autem suscipit dolorem quis reiciendis. Rem numquam dolore, fugiat sint, sed quam qui perspiciatis, ipsum maiores illum repellat accusamus?</p>
-                <h3>Communi</h3>
+                <h3>Wadi Zalaqa Camel Race</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Totam, ipsam. Libero autem suscipit dolorem quis reiciendis. 
+                    Rem numquam dolore, fugiat sint, sed quam qui perspiciatis, 
+                    ipsum maiores illum repellat accusamus?
+                </p>
+                <h3>Homunculus</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Totam, ipsam. Libero autem suscipit dolorem quis reiciendis. 
+                    Rem numquam dolore, fugiat sint, sed quam qui perspiciatis, 
+                    ipsum maiores illum repellat accusamus?
+                </p>
             </div>
         </div>
         
         <div class="trending-container">
             <h2>Trending</h2>
             <div class="trending">
-                <div clas="trending-card">
-                    <p>@tegan</p>
+                <div clasS="trending-card">
+                    <p class="at">@jackboakes</p>
                     <p>World Peace Builder</p>
                 </div>
-                <div clas="trending-card">
-                    <p>@morgan</p>
+                <div class="trending-card">
+                    <p class="at">@morgan</p>
                     <p>Super Cool Project</p>
                 </div>
-                <div clas="trending-card">
-                    <p>@kendall</p>
+                <div class="trending-card">
+                    <p class="at">@kendall</p>
                     <p>Life Changing App</p>
                 </div>
-                <div clas="trending-card">
-                    <p>@alex</p>
+                <div class="trending-card">
+                    <p class="at">@walrein</p>
                     <p>No Traffic Maker</p>
                 </div>
             </div>

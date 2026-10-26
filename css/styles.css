@@ -1,7 +1,13 @@
 :root {
     --font: Arial, Helvetica, sans-serif;
     --card-colour: #f5f5f5;
+    --heading-colour: #111;
+    --text-colour: #3f3f3f;
     --accent-colour: #dfdfdf;
+    --green: #9DCE3F;
+    --brown: #835E18;
+    --yellow: #E8E351;
+    --blue: #97B4F0;
 }
 
 * {
@@ -14,8 +20,7 @@ body {
     font-family: var(--font);
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
-    width: 100vw;
+    grid-template-rows: auto 1fr;
     height: 100vh;
 }
 
@@ -28,13 +33,118 @@ li {
 }
 
 header {
-    background-color: #835E18;
+    background-color: var(--green);
     padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+}
+
+header nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    height: 100%;
+    align-items: center;
+}
+
+header button {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    padding-block: 10px;
+    font-size: 16px;
+    background-color: var(--blue);
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+header button:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.bottom-left {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.bottom-left img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    grid-column: 1 / 1;
+    grid-row: 1 / 3;
+}
+
+header img {
+    width: 7%;
+}
+
+header p {
+    align-self: end;
+    margin-left: 20px;
+}
+header h2 {
+    align-self: start;
+    margin-left: 20px;
+}
+
+header .top-right {
+    display: flex;
+    align-self: center;
+    justify-content: end;
+}
+
+header .top-right p {
+    font-weight: bold;
+    font-size: 18.72px;
+    margin-left: 20px;
+}
+
+.search {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.search input {
+    width: 100%;
+    margin-left: 10px;
+    padding: 13px;
+    border: 0;
+    background-color: var(--accent-colour);
+}
+
+.top-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    align-items: center;
+}
+
+.top-right img {
+    width: 7%;
+    align-self: center;
+}
+
+.top-right .icon {
+    height: 10%;
+    width: 10%;
+    aspect-ratio: 1;
+    margin-left: 20px;
+    align-self: center;
+}
+
+.top-right p {
+    align-self: center;
 }
 
 .sidebar {
     grid-row: 1 / 3;
-    background-color: #97B4F0;
+    background-color: var(--blue);
     color: white;
     padding-block: 20px;
     display: grid;
@@ -52,6 +162,7 @@ header {
 
 .projects h2 {
     margin-bottom: 10px;
+    color: var(--heading-colour);
 }
 
 .announcements {
@@ -60,6 +171,7 @@ header {
 
 .trending {
     background-color: var(--card-colour);
+    border-top: 10px solid var(--accent-colour);
 }
 
 .card-container {
@@ -75,8 +187,7 @@ header {
 
 .card {
     background-color: var(--card-colour);
-    padding: 20px;
-    height: 220px;
+    height: 180px;
     border-top: 10px solid var(--accent-colour);
     display: flex;
     flex-direction: column;
@@ -87,11 +198,22 @@ header {
     display: flex;
     justify-content: end;
     height: 15%;
+    margin: 20px;
 }
-
 
 .card img {
     margin-left: 20px;
+}
+
+.card h3 {
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--accent-colour);
+    color: var(--heading-colour);
+}
+
+.card p {
+    padding: 10px 20px;
+    color: var(--text-colour);
 }
 
 .sidebar nav,
@@ -109,7 +231,7 @@ header {
 }
 
 .sidebar-header h1 {
-    position: fixed;
+    position: absolute;
     padding: 60px;
 }
 
@@ -135,3 +257,35 @@ header {
 nav li img {
     filter: invert(100%);
 }
+
+.icons img:hover {
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+.announcements h3 {
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--accent-colour);
+    color: var(--heading-colour);
+}
+
+.announcements p {
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--accent-colour);
+    color: var(--text-colour);
+}
+
+.trending-card {
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--accent-colour);
+}
+
+.trending-card p:not(.at) {
+    color: var(--text-colour);
+}
+
+.at {
+    color: var(--heading-colour);
+}
+
+
