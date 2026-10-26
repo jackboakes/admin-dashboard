@@ -187,7 +187,7 @@ header .top-right p {
 
 .card {
     background-color: var(--card-colour);
-    height: 180px;
+    height: 200px;
     border-top: 10px solid var(--accent-colour);
     display: flex;
     flex-direction: column;
